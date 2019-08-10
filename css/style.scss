@@ -5,6 +5,14 @@ $screen-sm-min: 768px;
 $screen-md-min: 992px;
 $screen-lg-min: 1200px;
 
+body {
+	margin: 0;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.5;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
 .container {
 	padding: 0 15px 0;
 	margin-left: auto;
@@ -26,7 +34,7 @@ nav ul {
 	padding: 0;
 	list-style: none;
 
-	::after {
+	&:after {
 		content: "";
 		clear: both;
 		display: table;
