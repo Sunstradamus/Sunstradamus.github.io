@@ -21,8 +21,20 @@ $screen-lg-min: 1200px;
 	}
 }
 
-nav ul > li {
-	display: block;
-	position: relative;
-	float: left;
+nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	::after {
+		content: "";
+		clear: both;
+		display: table;
+	}
+
+	> li {
+		display: block;
+		position: relative;
+		float: left;
+	}
 }
