@@ -6,6 +6,10 @@ $screen-md-min: 992px;
 $screen-lg-min: 1200px;
 
 .container {
+	padding: 0 15px 0;
+	margin-left: auto;
+	margin-right: auto;
+
 	@media (min-width: $screen-sm-min) {
 		width: 750px;
 	}
@@ -15,4 +19,10 @@ $screen-lg-min: 1200px;
 	@media (min-width: $screen-lg-min) {
 		width: 1170px;
 	}
+}
+
+nav > li {
+	display: block;
+	position: relative;
+	float: left;
 }
