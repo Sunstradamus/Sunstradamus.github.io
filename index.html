@@ -22,7 +22,7 @@ title: Home | Hi Googlebot
 <ul>
   {% for pub in site.publications reversed %}
     <li>
-      <a href="{{ pub.link }}">{{ pub.title }}</a>
+      <a href="{{ pub.link }}">[{{ pub.conference }}] {{ pub.title }}</a>
     </li>
   {% endfor %}
 </ul>
