@@ -61,6 +61,11 @@ nav ul {
 		> a {
 			display: block;
 			padding: 15px;
+			color: $black;
 		}
+	}
+
+	> li.active {
+		font-weight: bold;
 	}
 }
