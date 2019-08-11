@@ -81,8 +81,10 @@ nav ul {
 	}
 }
 
-.main {
-	height: calc(100vh - 351px);
+@media (min-width: $screen-sm-min) {
+	.main {
+		height: calc(100vh - 351px);
+	}
 }
 
 footer {
