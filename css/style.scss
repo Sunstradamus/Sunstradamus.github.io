@@ -10,7 +10,10 @@ $black: #454545;
 
 $true-white: #fff;
 $off-white: #fefefe;
+$light-white: #f5f5f5;
 $dark-white: #f1f1f1;
+
+$border-gray: #EAEAEA;
 
 body {
 	margin: 0;
@@ -69,5 +72,17 @@ nav ul {
 	> li.active {
 		font-weight: bold;
 		background-color: rgba(0, 0, 0, 0.1);
+	}
+}
+
+footer {
+	background-color: $light-white;
+	margin-top: 50px;
+	padding: 30px 0;
+	border-top: 1px $border-gray solid;
+	text-align: center;
+
+	@media (min-width: $screen-sm-min) {
+		padding: 50px 0;
 	}
 }
