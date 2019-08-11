@@ -3,4 +3,5 @@ timezone: "America/Vancouver"
 permalink:  /blog/:categories/:year/:month/:day/:title:output_ext
 
 collections:
-  - publications
+  publications:
+    output: false
