@@ -18,7 +18,7 @@ title: Home | Hi Googlebot
 </ul>
 
 <ul>
-  {% for pub in site.publications %}
+  {% for pub in site.publications reversed %}
     <li>
       <a href="{{ pub.link }}">{{ pub.title }}</a>
     </li>
