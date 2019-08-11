@@ -11,6 +11,10 @@ body {
 	font-weight: 400;
 	line-height: 1.5;
 	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+
+	> nav {
+		background-color: #F1F1F1;
+	}
 }
 
 .container {
@@ -44,5 +48,10 @@ nav ul {
 		display: block;
 		position: relative;
 		float: left;
+
+		> a {
+			display: block;
+			padding: 15px;
+		}
 	}
 }
