@@ -9,14 +9,7 @@
     <link rel="stylesheet" type="text/css" href="/css/style.css">
   </head>
   <body>
-    <nav>
-      <div class="container">
-        <ul>
-          <li{% if page.url == "/" %} class="active"{% endif %}><a href="/">Home</a></li>
-          <li{% if page.url == "/blog/" %} class="active"{% endif %}><a href="/blog/">Blog</a></li>
-        </ul>
-      </div>
-    </nav>
+    {% include navigation.html %}
 
     <section class="main">
       <div class="container">{{ content }}</div>

@@ -1,0 +1,8 @@
+    <nav>
+      <div class="container">
+        <ul>
+          <li{% if page.url == "/" %} class="active"{% endif %}><a href="/">Home</a></li>
+          <li{% if page.url contains "blog" %} class="active"{% endif %}><a href="/blog/">Blog</a></li>
+        </ul>
+      </div>
+    </nav>
