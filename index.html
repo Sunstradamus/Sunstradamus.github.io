@@ -18,11 +18,9 @@ title: Home | Hi Googlebot
 </ul>
 
 <ul>
-  {% for publication in site.publications %}
-    <li>
-      <a href="{{ publication.link }}">{{ publication.title }}</a>
+  {% for pub in site.publications %}
+    <li> {{ pub }}
+      <a>{{ pub.title }}</a>
     </li>
   {% endfor %}
 </ul>
-
-{{ site.collections }}
