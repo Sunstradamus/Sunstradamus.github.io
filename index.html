@@ -16,3 +16,11 @@ title: Home | Hi Googlebot
     </li>
   {% endfor %}
 </ul>
+
+<ul>
+  {% for publication in site.publications %}
+    <li>
+      <a href="{{ publication.link }}">{{ publication.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
