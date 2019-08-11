@@ -6,3 +6,11 @@ title: Home | Hi Googlebot
 <h1>Hello, world!</h1>
 
 <p>I make slow things fast, fast things faster, and faster things cheaper.</p>
+
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
