@@ -5,15 +5,24 @@ $screen-sm-min: 768px;
 $screen-md-min: 992px;
 $screen-lg-min: 1200px;
 
+$true-black: #000;
+$black: #454545;
+
+$true-white: #fff;
+$off-white: #fefefe;
+$dark-white: #f1f1f1;
+
 body {
 	margin: 0;
 	font-size: 1rem;
 	font-weight: 400;
 	line-height: 1.5;
 	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	color: $black;
+	background-color: $off-white;
 
 	> nav {
-		background-color: #F1F1F1;
+		background-color: $dark-white;
 	}
 }
 
