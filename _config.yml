@@ -2,6 +2,7 @@
 timezone: "America/Vancouver"
 permalink: /blog/:categories/:year/:month/:day/:title:output_ext
 
+paginate: 5
 excerpt_length: 50
 
 collections:
