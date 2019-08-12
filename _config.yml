@@ -1,6 +1,8 @@
 # Output options (more information on Jekyll's site)
 timezone: "America/Vancouver"
-permalink:  /blog/:categories/:year/:month/:day/:title:output_ext
+permalink: /blog/:categories/:year/:month/:day/:title:output_ext
+
+excerpt_length: 50
 
 collections:
   publications:
