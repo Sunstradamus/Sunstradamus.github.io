@@ -163,3 +163,21 @@ footer {
 .post-read-more {
 	font-weight: bold;
 }
+
+.post-image {
+	float: right;
+	height: 192px;
+	width: 192px;
+	margin-top: -35px;
+	filter: grayscale(90%);
+
+	&:hover {
+		filter: grayscale(0%);
+	}
+
+	img {
+	border-radius: 100px;
+	height: 192px;
+	width: 192px;
+	}
+}
