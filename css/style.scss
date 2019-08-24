@@ -197,6 +197,9 @@ footer {
  */
 
 .post-heading {
+	padding-top: 1em;
+	margin-bottom: 2.25em;
+
 	h1,h2,h3,h4,h5,h6 {
 		line-height: 1.1;
 	}
@@ -213,12 +216,5 @@ footer {
 		font-weight: 300;
 		margin-top: 10px;
 		margin-bottom: 20px;
-	}
-
-	.post-meta {
-		color: $muted-gray;
-		font-style: italic;
-		margin: 0;
-		margin-bottom: 10px;
 	}
 }
