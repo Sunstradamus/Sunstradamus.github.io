@@ -125,6 +125,11 @@ footer {
 
 .post-preview {
 	padding: 1em 0;
+	border-bottom: 1px solid $border-gray;
+
+	&:last-child {
+		border-bottom: 0;
+	}
 
 	a {
 		text-decoration: none;
@@ -174,11 +179,11 @@ footer {
 	height: 192px;
 	width: 192px;
 	margin-top: -100px;
-	filter: grayscale(90%);
+/*	filter: grayscale(90%);
 
 	&:hover {
 		filter: grayscale(0%);
-	}
+	}*/
 
 	img {
 	border-radius: 100px;
