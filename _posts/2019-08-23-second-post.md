@@ -69,15 +69,15 @@ Some text to show that the reference links can follow later.
 
 Inline `code` has `back-ticks around` it.
 
-```javascript
+{% highlight javascript linenos %}
 var s = "JavaScript syntax highlighting";
 alert(s);
-```
+{% endhighlight %}
  
-```python
+{% highlight python %}
 s = "Python syntax highlighting"
 print s
-```
+{% endhighlight %}
  
 ```
 No language indicated, so no syntax highlighting. 
