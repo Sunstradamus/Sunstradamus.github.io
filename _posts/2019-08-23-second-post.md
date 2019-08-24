@@ -74,10 +74,10 @@ var s = "JavaScript syntax highlighting";
 alert(s);
 {% endhighlight %}
  
-{% highlight python %}
+```python
 s = "Python syntax highlighting"
 print s
-{% endhighlight %}
+```
  
 ```
 No language indicated, so no syntax highlighting. 
