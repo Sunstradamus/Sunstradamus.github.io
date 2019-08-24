@@ -124,6 +124,8 @@ footer {
  */
 
 .post-preview {
+	padding: 1em 0;
+
 	a {
 		text-decoration: none;
 		color: $black;
@@ -137,7 +139,10 @@ footer {
 		line-height: 1.1;
 	}
 
-	padding: 1em 0;
+	.blog-tags {
+		margin-top: 5px;
+		color: #999;
+	}
 }
 
 .post-title {
