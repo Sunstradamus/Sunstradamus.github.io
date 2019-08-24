@@ -9,6 +9,15 @@ pre {
   font-size: 16px;
   line-height: 1.5em;
 }
+pre code {
+  padding: 0;
+  font-size: inherit;
+  color: inherit;
+  white-space: pre-wrap;
+  background-color: transparent;
+  border-radius: 0;
+}
+
 .highlight pre {
   border: none;
   background: none;
