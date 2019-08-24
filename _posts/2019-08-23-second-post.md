@@ -2,7 +2,7 @@
 layout: post
 title: "Markdown HTML Test Post"
 subtitle: "Please Ignore"
-tags: [general]
+tags: [test]
 ---
 
 # H1
