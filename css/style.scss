@@ -117,3 +117,23 @@ footer {
 .icons {
 	font-size: 3em;
 }
+
+/*
+ *	/blog/
+ */
+
+.post-preview {
+	a {
+		text-decoration: none;
+		color: $black;
+
+		&:hover {
+			color: $light-blue;
+		}
+	}
+}
+
+.post-title {
+	font-size: 1.75em;
+	margin: 0;
+}

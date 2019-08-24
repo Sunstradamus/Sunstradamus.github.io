@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "First Post"
+subtitle: "Welcome"
+tags: [general]
 ---
-
-# Welcome
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin fringilla auctor enim non pretium. Aliquam a fringilla sem. Nullam imperdiet tortor quis velit condimentum, in hendrerit turpis consequat. Sed consequat turpis ac lorem iaculis dignissim. Aenean convallis sed lorem sit amet sagittis. Integer sed augue libero. Vivamus sagittis ante et est vestibulum, ut placerat quam pellentesque. In consectetur enim porta mi accumsan tincidunt. Fusce ultrices mauris eget vestibulum pellentesque. Cras at eros nulla. Pellentesque auctor sollicitudin lacus, in pharetra enim ultricies et. Maecenas eu lacinia ipsum. Duis dapibus consequat nibh in posuere. Suspendisse fermentum accumsan lectus, in aliquam diam dapibus eget. Sed commodo dolor tellus, vitae porta risus finibus sit amet.
 
-https://www.youtube.com/watch?v=_QyYaPWasos
+[![Sup](https://img.youtube.com/vi/_QyYaPWasos/0.jpg)](https://www.youtube.com/watch?v=_QyYaPWasos)
