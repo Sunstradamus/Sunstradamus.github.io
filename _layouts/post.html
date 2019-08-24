@@ -12,6 +12,16 @@
   <body>
     {% include navigation.html %}
 
+    <section class="header">
+      <div class="container">
+        <div class="post-heading">
+          <h1>{{ page.title }}</h1>
+          <h2 class="post-subheading">{{ page.subtitle }}</h2>
+          <span class="post-meta">Posted on {{ page.date | date: site.date_format }}</span>
+        </div>
+      </div>
+    </section>
+
     <section class="main">
       <div class="container">{{ content }}</div>
     </section>
