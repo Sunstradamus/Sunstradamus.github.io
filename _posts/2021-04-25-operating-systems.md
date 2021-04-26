@@ -30,7 +30,7 @@ int main() {
 
 If we compile this on Windows using Visual Studio, we can expect it to roughly translate into the following assembly:
 
-```asm
+{% highlight assembly linenos %}
 $SG5198 DB        'Hello World', 0aH, 00H           ; Allocate bytes for our string
 
 main    PROC
@@ -41,7 +41,7 @@ main    PROC
         add     rsp, 40                             ; Cleanup call stack
         ret     0                                   ; Pop the return address from the call stack into the instruction pointer
 main    ENDP
-```
+{% endhighlight %}
 
 Yet, when we look at the final compiled binary, it is quite large (~111 KB) - much larger than what we would expect the machine code to be! Even if each instruction took 8 bytes, we only have 6 instructions and an 11 byte string so we would only expect a binary filesize of ~60 bytes. Where did all of this extra stuff come from?
 
