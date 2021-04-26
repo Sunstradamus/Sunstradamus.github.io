@@ -78,4 +78,30 @@ However, this still doesn't answer our original question: where did the extra hu
 
 The initial snippet of bytes we looked at contains the entire DOS header (first 64 bytes), and part of the DOS stub program that's loaded when the program is run in DOS mode for compatibility. As an aside, Windows is not inherently more insecure than Linux; it has opted to provide a large degree of backwards compatibility rather than not. You can generally run a Windows 95 program on Windows 10 without having to do anything special, but you're unlikely to be able to run a MacOS 6 program on the newest MacOS. A consequence of this backwards compatibility is that there are a large number of potential attack vectors that can be abused, but fixing them may break compatibility with some programs that were built _using_ these attack vectors benevolently. If we analyzed the DOS stub program section alone, we would be able to find the answer to our earlier questions regarding the program loading and execution process, but that wouldn't be as interesting or as fun.
 
-The core of the PE format is in the PE header, which is made up of the COFF header and the Optional header (it's called optional because the COFF format is also used for the intermediary object files produced by a compiler, which doesn't use this header). Immediately following the PE header is the Section Table, where each entry in the table corresponds to a different Section header. Sections in the PE format contain different blobs of information, such as the import section (handling imported files and functions), text section (executable code), and relocation section (handles turning relative addresses into absolute addresses), that is used by the OS to load auxillary resources requested by the program. After the Section Table, the remainder of the PE file are the various sections defined within the Section Table concatenated one after another. This is effectively what makes up the 111 KB of our C program.
+The core of the PE format is in the PE header, which is made up of the COFF header and the Optional header (it's called optional because the COFF format is also used for the intermediary object files produced by a compiler, which doesn't use this header). Immediately following the PE header is the Section Table, where each entry in the table corresponds to a different Section header. Sections in the PE format contain different blobs of information, such as the import section (handling imported files and functions), text section (executable code), and relocation section (handles turning relative addresses into absolute addresses), that is used by the OS to load auxillary resources requested by the program. After the Section Table, the remainder of the PE file are the various sections defined within the Section Table concatenated one after another. This is effectively what makes up the 111 KB of our C program, athough the distribution of which section occupies the most space is still unknown.
+
+Reading a PE file is relatively straight forward; load the entire file into a contiguous region of memory, and we follow the layout beginning with the first byte. In psuedocode:
+
+```c
+struct DOS_HDR {
+	unsigned short sig;
+	...
+};
+
+void parse(unsigned char* ptr) {
+	DOS_HDR *hdr = null;
+	hdr = (DOS_HDR*) ptr;
+
+	if (hdr->sig != 0x5a4d) {
+		printf("Invalid PE file\n");
+	}
+	...
+}
+
+int main() {
+	unsigned char* buffer = malloc(sizeOfFile);
+	read(buffer, sizeOfBuffer, pathtoFile);
+	parse(buffer);
+	return 0;
+}
+```
