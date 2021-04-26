@@ -31,11 +31,11 @@ int main() {
 If we compile this on Windows using Visual Studio, we can expect it to roughly translate into the following assembly:
 
 ```nasm
-$SG5198 DB        'Hello World', 0aH, 00H           ; Allocate bytes for our string
+$msg DB        'Hello World', 0aH, 00H              ; Allocate bytes for our string
 
 main    PROC
         sub     rsp, 40                             ; Reserve bytes for our call stack
-        lea     rcx, OFFSET FLAT:$SG5198            ; Load address of the first byte of the string
+        lea     rcx, OFFSET FLAT:$msg               ; Load address of the first byte of the string
         call    printf                              ; Push return address onto the stack and jump to printf
         xor     eax, eax                            ; Clear EAX register to 0
         add     rsp, 40                             ; Cleanup call stack
