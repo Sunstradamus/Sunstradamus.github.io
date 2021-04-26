@@ -23,8 +23,8 @@ Let's take a look at this simple program in C that prints "Hello World" to a con
 #include <stdio.h>
 
 int main() {
-	printf("Hello World\n");
-	return 0;
+    printf("Hello World\n");
+    return 0;
 }
 ```
 
@@ -84,24 +84,30 @@ Reading a PE file is relatively straight forward; load the entire file into a co
 
 ```c
 struct DOS_HDR {
-	unsigned short sig;
-	...
+    unsigned short sig;
+    ...
 };
 
 void parse(unsigned char* ptr) {
-	DOS_HDR *hdr = null;
-	hdr = (DOS_HDR*) ptr;
+    DOS_HDR *hdr = null;
+    hdr = (DOS_HDR*) ptr;
 
-	if (hdr->sig != 0x5a4d) {
-		printf("Invalid PE file\n");
-	}
-	...
+    if (hdr->sig != 0x5a4d) {
+        printf("Invalid PE file\n");
+    }
+    ...
 }
 
 int main() {
-	unsigned char* buffer = malloc(sizeOfFile);
-	read(buffer, sizeOfBuffer, pathtoFile);
-	parse(buffer);
-	return 0;
+    unsigned char* buffer = malloc(sizeOfFile);
+    read(buffer, sizeOfBuffer, pathtoFile);
+    parse(buffer);
+    return 0;
 }
 ```
+
+We will be building upon this initial PE parser, eventually turning it into a very basic PE loader, making it crossplatform to run on Linux, and then finally turning it into a crossplatform crossloader that can run both PE and ELF files on Windows and Linux. The goal is to gain both a practical and theoretical understanding of the executable loading process, which we will later use to creatively alter running code to do something like so:
+
+<video width="320" height="240" controls>
+  <source type="video/mp4" src="/img/valorant-aimbot.mp4">
+</video>
