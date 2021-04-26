@@ -108,6 +108,11 @@ int main() {
 
 We will be building upon this initial PE parser, eventually turning it into a very basic PE loader, making it crossplatform to run on Linux, and then finally turning it into a crossplatform crossloader that can run both PE and ELF files on Windows and Linux. The goal is to gain both a practical and theoretical understanding of the executable loading process, which we will later use to creatively alter running code to do something like so:
 
-<video width="320" height="240" controls>
-  <source type="video/mp4" src="/img/valorant-aimbot.mp4">
-</video>
+<div class="centered">
+  <video height="640" controls>
+    <source type="video/mp4" src="/img/valorant-aimbot.mp4">
+  </video>
+  <video height="640" controls>
+    <source type="video/mp4" src="/img/valorant-wallhack.mp4">
+  </video>
+</div>
