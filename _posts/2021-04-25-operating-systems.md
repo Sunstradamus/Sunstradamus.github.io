@@ -30,7 +30,20 @@ int main() {
 
 If we compile this on Windows using Visual Studio, we can expect it to roughly translate into the following assembly:
 
-{% highlight assembly linenos %}
+```tasm
+$SG5198 DB        'Hello World', 0aH, 00H           ; Allocate bytes for our string
+
+main    PROC
+        sub     rsp, 40                             ; Reserve bytes for our call stack
+        lea     rcx, OFFSET FLAT:$SG5198            ; Load address of the first byte of the string
+        call    printf                              ; Push return address onto the stack and jump to printf
+        xor     eax, eax                            ; Clear EAX register to 0
+        add     rsp, 40                             ; Cleanup call stack
+        ret     0                                   ; Pop the return address from the call stack into the instruction pointer
+main    ENDP
+```
+
+{% highlight tasm %}
 $SG5198 DB        'Hello World', 0aH, 00H           ; Allocate bytes for our string
 
 main    PROC
