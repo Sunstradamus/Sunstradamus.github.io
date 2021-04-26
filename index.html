@@ -9,10 +9,12 @@ title: Home | Hi Googlebot
 
 <p>My interest in computers started with MapleStory in 2004 when I was first introduced to "highly optimized gameplay", à la hacking. I met some interesting people on various forums who showed me the basics, and it went from there. Over time, I moved into the private server scene for ROSE Online and World of Warcraft, picking up my networking background. Eventually, I obtained a formal CS education in my undergraduate years, graduating with distinction.</p>
 
+<p>This website is quite low on the to-do list, and it's really only here as a glorified blog that I use to pseudo-teach friends interested in what I do. The publications list below is probably out of date - if you're interested in a paper that I'm listed as an author in, feel free to contact me for a copy.</p>
+
 <h3>Latest blog posts</h3>
 
 <ul>
-  {% for post in site.posts %}
+  {% for post in site.posts limit:5 %}
     <li>
       <a href="{{ post.url }}">{{ post.title }}</a>
     </li>
